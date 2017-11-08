@@ -410,6 +410,24 @@ body {
   color: #959595;
   background-color: white;
 }
+/*
+img {
+  max-width: 100%;
+  height: auto;
+}
+*/
+.box {
+  min-height: 200px;
+  padding: 45px;
+}
+.box--small {
+  outline: 1px solid blue;
+  outline-offset: -2px;
+}
+.box--large {
+  outline: 1px solid red;
+  outline-offset: -2px;
+}
 .btn {
   display: inline-block;
   box-sizing: border-box;
@@ -444,9 +462,11 @@ body {
   font-size: 13px;
   background-color: #82ca9c;
 }
-.box {
-  min-height: 280px;
-  padding: 45px;
+.iphone {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  height: auto;
 }
 .product {
   padding: 45px 50px;
@@ -454,11 +474,29 @@ body {
 .product:hover {
   background-color: white;
 }
-.page-header {
-  color: white;
-  background: url("../img/bg-header.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
+.buying {
+  padding-top: 105px;
+  padding-bottom: 145px;
+  background-color: #f6f7fa;
+}
+.description {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+.description p {
+  margin-top: 0;
+}
+.description h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.description__first-part p,
+.description__second-part p {
+  display: none;
+}
+.description__first-part p:last-of-type,
+.description__second-part p:last-of-type {
+  margin-bottom: 0;
 }
 .details {
   padding-top: 95px;
@@ -473,46 +511,112 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-.reasons {
-  padding-top: 120px;
-  padding-bottom: 165px;
-  color: white;
-  background-color: #82ca9c;
-}
-.buying {
-  padding-top: 105px;
-  padding-bottom: 145px;
-  background-color: #f6f7fa;
-}
 .page-footer {
   padding-top: 130px;
   padding-bottom: 150px;
   color: white;
   background-color: #192431;
 }
+.page-header {
+  min-height: 400px;
+  padding-top: 55px;
+  color: white;
+  background: url("../img/bg-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center -200px;
+}
+.page-header h1 {
+  margin-top: 0;
+}
+.page-header p {
+  margin: 0;
+}
+.page-header__logo {
+  margin-bottom: 100px;
+}
+.page-header__slogan {
+  max-width: 450px;
+}
+.reasons {
+  padding-top: 120px;
+  padding-bottom: 165px;
+  color: white;
+  background-color: #82ca9c;
+}
+.slider {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+@media (min-width: 575px) {
+  .visually-hidden {
+    display: none;
+  }
+}
 @media (min-width: 576px) {
   .iphone {
     position: absolute;
-    top: -790px;
-    right: -35px;
+    top: 50px;
+    right: 30px;
+    height: 450px;
+    width: auto;
+    max-width: none;
   }
-}
-@media (min-width: 1200px) {
+  .description {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  .description .container {
+    position: relative;
+  }
+  .description__first-part {
+    padding-top: 50px;
+  }
+  .description__first-part h2 {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    min-width: 500px;
+  }
+  .description__first-part p:nth-of-type(-n+2) {
+    display: block;
+  }
   .page-header {
-    min-height: 951px;
-    padding-top: 55px;
-  }
-  .page-header h1 {
-    margin-top: 0;
-  }
-  .page-header p {
-    margin: 0;
+    min-height: 600px;
   }
   .page-header__logo {
-    margin-bottom: 345px;
+    margin-bottom: 200px;
   }
-  .page-header__slogan {
-    max-width: 450px;
+}
+@media (min-width: 768px) {
+  .iphone {
+    right: 70px;
+    height: 480px;
+  }
+  .description {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .description .container {
+    position: static;
+  }
+  .description__first-part {
+    padding-top: 0px;
+  }
+  .description__first-part h2 {
+    position: static;
+    top: 0;
+    left: 15px;
+    min-width: none;
+  }
+  .description__first-part p {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .iphone {
+    top: -665px;
+    right: -90px;
+    width: 600px;
+    height: auto;
   }
   .description {
     padding-top: 100px;
@@ -522,14 +626,35 @@ body {
   .description p {
     margin-top: 0;
   }
+  .description__first-part p,
+  .description__second-part p {
+    display: block;
+  }
   .description__first-part {
     padding-left: 0;
   }
-  .description__first-part p:last-child {
-    margin-bottom: 0;
-  }
   .description__second-part {
     padding-right: 0;
+    padding-top: 185px;
+  }
+  .page-header {
+    min-height: 951px;
+    background-position: top center;
+  }
+  .page-header__logo {
+    margin-bottom: 345px;
+  }
+  .page-header__slogan {
+    max-width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .iphone {
+    top: -790px;
+    right: -70px;
+    width: auto;
+  }
+  .description__second-part {
     padding-top: 165px;
   }
 }
