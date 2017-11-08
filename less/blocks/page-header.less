@@ -1,24 +1,48 @@
 .page-header {
+  min-height: 400px;
+  padding-top: 55px;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
   color: white;
   background: url("../img/bg-header.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center -200px;
   // background-attachment: fixed;
 }
 
-@media @xl {
+.page-header__logo {
+  margin-bottom: 100px;
+}
+
+.page-header__slogan {
+  max-width: 450px;
+}
+
+@media @sm {
+
+  .page-header{
+    min-height: 600px;
+  }
+
+  .page-header__logo {
+    margin-bottom: 200px;
+  }
+
+}
+
+@media @lg {
 
   .page-header {
     min-height: 951px;
-    padding-top: 55px;
 
-    h1 {
-      margin-top: 0;
-    }
-
-    p {
-      margin: 0;
-    }
+    background-position: top center;
   }
 
   .page-header__logo {

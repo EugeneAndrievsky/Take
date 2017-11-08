@@ -7,8 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <!--<i class="fa fa-heart-o fa-lg"></i>-->
   <link href="https://fonts.googleapis.com/css?family=Merriweather:900i|Open+Sans:300,400,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -36,10 +34,13 @@
           <h2>Start something new</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <p>eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
         </div>
         <div class="description__second-part  col-sm-6">
-          <img class="iphone" src="../img/iPhone.png" alt="">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../img/iPhone.png">
+            <img class="iphone" src="../img/iPhone-without-shadow.png">
+          </picture>
           <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
           <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
         </div>
@@ -50,39 +51,39 @@
   <article class="slider">
     <div class="container">
        <div class="row">
-        <section class="box  box--small  col-12">
+        <section class="box  box--small  col-12  col-sm-6 order-sm-1  col-lg-3">
           <h3>Design quality</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.</p>
           <a href=""><b>Find out more</b><span></span></a>
         </section>
-        <section class="box  box--large  box--photo  col-12">
+        <section class="box  box--large  col-12  col-sm-12 order-lg-1  col-lg-6">
           <h3>Start something new</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.</p>
           <a href=""><b>Get started now</b><span></span></a>
         </section>
-        <section class="box  box--small  col-12">
+        <section class="box  box--small  col-12  col-sm-6 order-sm-1  col-lg-3">
           <h3>How to shoo great</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.</p>
           <a href=""><b>Find out more</b><span></span></a>
         </section>
       </div>
       <div class="row">
-        <section class="box  box--large  box--photo  col-12">
+        <section class="box  box--large  col-12  col-sm-12  col-lg-6">
           <h3>Sign up & see why</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.</p>
           <a href=""><b>Get started now</b><span></span></a>
         </section>
-        <section class="box  box--small  col-12">
+        <section class="box  box--small  col-12  col-sm-6  col-lg-3">
           <h3>Perfect pictures</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.</p>
           <a href=""><b>Find out more</b><span></span></a>
         </section>
-        <section class="box  box--small  box--photo  col-12">
+        <section class="box  box--small  col-12  col-sm-6  col-lg-3">
           <h3>Our clients</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.</p>
           <a href=""><b>Get insights</b><span></span></a>
         </section>
-        <section class="box  box--small  col-12">
+        <section class="box  box--small  col-12  visually-hidden">
           <h3>Built to last</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut adipisicing.</p>
           <a href=""><b>Find out more</b><span></span></a>
