@@ -39,14 +39,51 @@
   }
 
   &--small {
-    outline: 1px solid blue;
-    outline-offset: -2px;
+
   }
 
   &--large {
-    outline: 1px solid red;
-    outline-offset: -2px;
+
   }
+
+  &--design-quality {
+    background-color: #f5989d;
+  }
+
+  &--start-something {
+    background: url("../img/start-something.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &--how-to {
+    background-color: #bd8cbf;
+  }
+
+  &--sign-up {
+    background: url("../img/sign-up.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &--perfect-pictures {
+    background-color: #82ca9c;
+
+  }
+
+  &--clients {
+    background: url("../img/clients.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &--built {
+    background-color: #615f7d;
+  }
+
 }
 
 .box__arrow {
@@ -57,4 +94,20 @@
   min-height: 18px;
 
   background-image: url("../img/arrow.png");
+}
+
+@media @sm {
+
+  .box--clients {
+    background-position: 80% center;
+  }
+
+}
+
+@media @md {
+
+  .box--clients {
+    background-position: 60% center;
+  }
+
 }
