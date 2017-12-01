@@ -450,24 +450,56 @@ img {
   font-weight: 700;
   color: white;
 }
-.box--small {
-  outline: 1px solid blue;
-  outline-offset: -2px;
+.box--design-quality {
+  background-color: #f5989d;
 }
-.box--large {
-  outline: 1px solid red;
-  outline-offset: -2px;
+.box--start-something {
+  background: url("../img/start-something.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.box--how-to {
+  background-color: #bd8cbf;
+}
+.box--sign-up {
+  background: url("../img/sign-up.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.box--perfect-pictures {
+  background-color: #82ca9c;
+}
+.box--clients {
+  background: url("../img/clients.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.box--built {
+  background-color: #615f7d;
 }
 .box__arrow {
-  background-image: url("../img/arrow.png");
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
 }
 .box__heart {
-  min-height: 18px;
-  background-image: url("../img/arrow.png");
+  position: absolute;
+  bottom: 38px;
+  right: 42px;
+  min-height: 17px;
+  width: 18px;
+  background-image: url("../img/heart.png");
+  background-repeat: none;
+  cursor: pointer;
 }
 .btn {
   display: inline-block;
   box-sizing: border-box;
+  margin-bottom: 20px;
   padding: 0 12px;
   border: none;
   border-radius: 5px;
@@ -479,7 +511,6 @@ img {
   text-decoration: none;
   color: white;
   background-color: #bd8cbf;
-  margin-bottom: 20px;
 }
 .btn--inactive {
   background-color: #e1e1e1;
@@ -487,6 +518,7 @@ img {
 .btn--large {
   display: inline-block;
   box-sizing: border-box;
+  margin-bottom: 20px;
   padding: 0 23px;
   border: none;
   border-radius: 5px;
@@ -551,6 +583,20 @@ img {
   line-height: 25px;
   font-weight: 400;
   color: #8297a7;
+}
+.product__platform {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+}
+.product__platform--windows {
+  background-image: url("../img/windows.png");
+}
+.product__platform--apple {
+  background-image: url("../img/apple.png");
 }
 .buying {
   padding-top: 40px;
@@ -683,12 +729,14 @@ img {
   color: #57697f;
 }
 .page-footer__form {
+  position: relative;
   margin-bottom: 13px;
+  width: 100%;
+  max-width: 470px;
 }
 .page-footer__form input[type="text"] {
   height: 60px;
   width: 100%;
-  max-width: 400px;
   border: 0;
   padding: 0;
 }
@@ -700,6 +748,19 @@ img {
   border: none;
   font-size: 0;
   background-color: #82ca9c;
+}
+.page-footer__form::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 21px;
+  right: 18px;
+  width: 25px;
+  height: 8px;
+  border: 1px solid white;
+  border-top: transparent;
+  border-right: transparent;
+  transform: rotate(-45deg);
 }
 .page-header {
   min-height: 400px;
@@ -784,8 +845,8 @@ img {
 .reasons .row div:last-child p {
   margin-bottom: 0;
 }
-.slider {
-  background-color: rgba(255, 0, 0, 0.4);
+.slider .container {
+  position: relative;
 }
 @media (min-width: 444px) {
   .page-header__slogan p {
@@ -798,6 +859,9 @@ img {
   }
 }
 @media (min-width: 576px) {
+  .box--clients {
+    background-position: 80% center;
+  }
   .iphone {
     position: absolute;
     top: 50px;
@@ -860,6 +924,9 @@ img {
   }
 }
 @media (min-width: 768px) {
+  .box--clients {
+    background-position: 60% center;
+  }
   .iphone {
     right: 70px;
     height: 480px;
